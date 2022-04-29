@@ -41,7 +41,7 @@ _Send <code>!help</code> Anywhere._
 
 ### Built using:
 
-- [Whatsapp Web JS](https://github.com/pedroslopez/whatsapp-web.js/ "Whatsapp Web JS") - This project is fully depended on this Library
+- [Whatsapp Web JS](https://github.com/pedroslopez/whatsapp-web.js/ "Whatsapp Web JS") - This project is fully dependent on this Library
 
 
 ### License & Copyright :
