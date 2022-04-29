@@ -1,0 +1,53 @@
+{
+  "name": "SciBot",
+  "version": "1.0.0",
+  "description": "A Whatsapp bot compatible with MultiDevice",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "gentoken": "node session/genToken.js",
+    "gentokenlite": "node session/genTokenLite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devansh9999/SciBot"
+  },
+  "keywords": [
+    "SciBot",
+    "whatsapp-bot",
+    "MD-whatsapp-bot",
+    "bot"
+  ],
+  "author": "Devansh Chopra",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/devansh9999/SciBot#readme",
+  "dependencies": {
+    "@iamtraction/google-translate": "^1.1.2",
+    "axios": "^0.21.0",
+    "canvacord": "^5.2.3",
+    "child_process": "^1.0.2",
+    "chrome": "^0.1.0",
+    "discord-xp": "^1.1.16",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^3.0.0",
+    "mime-to-extensions": "^1.0.2",
+    "mongodb": "^3.6.3",
+    "node-cron": "^3.0.0",
+    "ocr-space-api-wrapper": "^1.0.6",
+    "puppeteer-core": "^1.9.0",
+    "qr-image": "^3.2.0",
+    "qrcode-svg": "^1.1.0",
+    "qrcode-terminal": "^0.12.0",
+    "serve-index": "^1.9.1",
+    "urban-dictionary": "^3.0.2",
+    "wa-minigames": "^1.1.7",
+    "weather-js": "^2.0.0",
+    "whatsapp-web.js": "^1.16.4-alpha.0",
+    "youtube-mp3-downloader": "^0.7.10",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.0"
+  }
+}
