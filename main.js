@@ -299,7 +299,9 @@ client.on("message", async (msg) => {
 //MINIGAME
 const minigames = new MiniGames();
 client.on('message_create', async (msg) => {
-  if (msg.body.startsWith("!download")) {
+  // var UBCheck=false;
+  
+  if (msg.body.startsWith("!download")&&msg.fromMe) {
 
     //discord-xp
     var cmd_user = await msg.getContact();
@@ -378,9 +380,90 @@ videos.forEach( async function ( v ) {
     } else {
       await msg.reply("_This Feature Unlocks at Level 10_\n_Type *!lvl* For Your Current Level_");
     }
+  }else if(!msg.fromMe&& !config.userbot){
+    if (msg.body.startsWith("!download")) {
+
+      //discord-xp
+      var cmd_user = await msg.getContact();
+      if (!cmd_user.isMe) {
+        try {
+          const data = await Levels.fetch(cmd_user.id.user, "Global", false);
+          var data_level = data.level
+          console.log("discord-xp");
+          console.log(data_level);
+        }
+        catch (error) {
+          console.log(error);
+        }
+      }
+  
+      //feature
+      console.log(parseInt(data_level));
+      if (parseInt(data_level) >= 5 || cmd_user.isMe) {
+        
+        let name= msg.body.substring(10);
+        const r = await yts( name )
+        const videos = r.videos.slice( 0,1 )
+  videos.forEach( async function ( v ) {
+    const views = String( v.views ).padStart( 10, ' ' )
+    console.log( `${ views } | ${ v.title } (${ v.timestamp }) | ${ v.type }` )
+    if(v.timestamp.replace(/[^:]/g, "").length==1 && parseInt(v.timestamp.substring(0,v.timestamp.indexOf(":")))<10){
+      // return v.videoId;
+  
+        // let url = msg.body.substring(10);
+        // let id = ""
+        // if (url.includes("?v=")) {
+        //   let idx = url.indexOf("?v=");
+        //   id = url.substring(idx + 3);
+        // }
+        // else if (url.includes("youtu.be/")) {
+        //   let idx = url.indexOf("youtu.be/");
+        //   id = url.substring(idx + 9);
+        // }
+  
+        //Configure YoutubeMp3Downloader with your settings
+        const chat = await msg.getChat();
+        const idk = chat.id._serialized;
+        var YD = new YoutubeMp3Downloader({
+          "ffmpegPath": "./ffmpeg.exe",        // FFmpeg binary location
+          "outputPath": "./",    // Output file location (default: the home directory)
+          "youtubeVideoQuality": "highestaudio",  // Desired video quality (default: highestaudio)
+          "queueParallelism": 2,                  // Download parallelism (default: 1)
+          "progressTimeout": 2000,                // Interval in ms for the progress reports (default: 1000)
+          "allowWebm": false                      // Enable download from WebM sources (default: false)
+        });
+  
+        //Download video and save as MP3 file
+        YD.download(v.videoId, "Audio.mp3");
+  
+        YD.on("finished", async function (err, data) {
+  
+          const aud = MessageMedia.fromFilePath(path.join(__dirname, data.file));
+          console.log("location: " + data.file);
+          const TN = await MessageMedia.fromUrl(v.image);
+  
+          client.sendMessage(idk, TN, { caption: "*DOWNLOADED:* " + data.title });
+          client.sendMessage(idk, aud, { sendAudioAsVoice: true });
+  
+        });
+  
+        YD.on("error", function (error) {
+          console.log(error);
+        });
+  
+        YD.on("progress", function (progress) {
+          console.log(JSON.stringify(progress));
+        });
+     
+       } } )
+  
+      } else {
+        await msg.reply("_This Feature Unlocks at Level 10_\n_Type *!lvl* For Your Current Level_");
+      }
+    }
   }
 
-  if (msg.body.startsWith("#")) {
+  if (msg.body.startsWith("#")&&msg.fromMe) {
     let args = msg.body.slice(1).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
     let chat = await msg.getChat();
@@ -404,11 +487,39 @@ videos.forEach( async function ( v ) {
       // return [question,answer];
     }
     makeGetRequest("https://g.tenor.com/v1/search?q=" + command + "&key=9Q40NJG3T240&limit=100");
+  }else if (!msg.fromMe&& !config.userbot){
+    if (msg.body.startsWith("#")) {
+      let args = msg.body.slice(1).trim().split(/ +/g);
+      let command = args.shift().toLowerCase();
+      let chat = await msg.getChat();
+      async function makeGetRequest(Link) {
+  
+        let res = await axios.get(Link);
+  
+        let arr = res.data.results;
+  
+        let random = Math.floor(Math.random() * arr.length)
+        console.log(random);
+        const qm = await msg.getQuotedMessage();
+        let url = arr[random].media[0].webm.url;
+        // return question;
+        let sticker = await MessageMedia.fromUrl(url, { unsafeMime: true });
+        if (msg.hasQuotedMsg) {
+          await qm.reply(sticker, chat.id._serialized, { sendMediaAsSticker: true });
+        } else {
+          await msg.reply(sticker, chat.id._serialized, { sendMediaAsSticker: true });
+        }
+        // return [question,answer];
+      }
+      makeGetRequest("https://g.tenor.com/v1/search?q=" + command + "&key=9Q40NJG3T240&limit=100");
+    }
   }
-  if (msg.body.startsWith('!NumbersGame')) {
+  if (msg.body.startsWith('!NumbersGame')&&msg.fromMe) {
+    await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
+  }else if(!msg.fromMe&& !config.userbot){
     await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
   }
-  else if (msg.body.startsWith('!RiddlesGame')) {
+   if (msg.body.startsWith('!RiddlesGame')&&msg.fromMe) {
 
     async function makeGetRequest(Link) {
 
@@ -424,11 +535,30 @@ videos.forEach( async function ( v ) {
       // return [question,answer];
     }
     makeGetRequest("https://ibk-riddles-api.herokuapp.com/?ref=https://githubhelp.com")
-  } else if (msg.body.startsWith('!MafiaGame')) {
-    var contact = await msg.getContact();
-    var mentions = msg.getMentions();
-    await minigames.addGameChat(msg._getChatId(), new MAFIA(msg, client, contact.id, mentions));
-  } else if (msg.body.startsWith('!ttt')) {
+  }else if(!msg.fromMe&& !config.userbot){
+    async function makeGetRequest(Link) {
+
+      let res = await axios.get(Link);
+
+      let data = res.data;
+      question = data.question;
+      answer = data.answer
+      console.log(answer);
+      // return question;
+
+      await minigames.addGameChat(msg._getChatId(), new MyGame2(msg, client, question, answer));
+      // return [question,answer];
+    }
+    makeGetRequest("https://ibk-riddles-api.herokuapp.com/?ref=https://githubhelp.com")
+  
+  }
+  
+  // else if (msg.body.startsWith('!MafiaGame')) {
+  //   var contact = await msg.getContact();
+  //   var mentions = msg.getMentions();
+  //   await minigames.addGameChat(msg._getChatId(), new MAFIA(msg, client, contact.id, mentions));
+  // }
+    if (msg.body.startsWith('!ttt')&&!msg.fromMe&&!config.userbot) {
     var contact = await msg.getContact();
     var mentions = await msg.getMentions();
     console.log("Mentions[0]: " + JSON.stringify(mentions[0]));
@@ -470,7 +600,36 @@ client.on("message_create", async (msg) => {
 
     console.log({ command, args });
 
-    if (client.commands.has(command)) {
+    if (client.commands.has(command)&&msg.fromMe) {
+      try {
+        const chat=await msg.getChat();
+        var user = await msg.getContact();
+        var user_name = user.pushname;
+
+        if (!msg.fromMe) {
+          let temp = await Levels.fetch(user.id.user, "Global", false);
+          let today = new Date().toISOString();
+          try {
+            temp = JSON.stringify(temp.lastUpdated);
+            console.log("1:  " + temp.substring(1, temp.length - 8));
+            console.log("2:  " + today.substring(0, today.length - 7));
+            if (today.substring(0, today.length - 7) != temp.substring(1, temp.length - 8)) {
+
+              
+                await Levels.appendXp(user.id.user, "Global", 25);
+              
+            }
+          } catch (error) {
+            console.log("levelled up");
+            await Levels.appendXp(user.id.user,"Global", 25);
+          }
+        }// await client.sendMessage(msg.to,command)
+
+        await client.commands.get(command).execute(client, msg, args);
+      } catch (error) {
+        console.log(error);
+      }
+    }else if(!msg.fromMe&& !config.userbot){
       try {
         const chat=await msg.getChat();
         var user = await msg.getContact();
