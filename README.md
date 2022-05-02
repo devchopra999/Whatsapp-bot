@@ -1,6 +1,5 @@
 
-<br>
-
+<a href="https://devansh-scimitar.me/SciBot/"><h1>SCIBOT</h1></a>
 
 ### My Favorite Commands :
 
