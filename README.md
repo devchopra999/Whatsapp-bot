@@ -1,5 +1,5 @@
 
-<a href="https://devansh-scimitar.me/SciBot/"><h1>SCIBOT</h1></a>
+<a href="https://devansh-scimitar.me/Whatsapp-bot/"><h1>SCIBOT</h1></a>
 
 ### My Favorite Commands :
 
