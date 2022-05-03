@@ -1,5 +1,8 @@
 # Prerequisites :
 - Nodejs & npm<br>download from here <code>https://nodejs.org/</code>
+
+<h1>You can skip to step 3 but your bot may run out of memory if everyone is using the database and ocr api that i have provided in example.env already</h1>
+
 ### 1. You need a MongoDB, You can create it for free. Follow these steps 👇
 - Open https://cloud.mongodb.com
 - Click the Try MongoDB Cloud Now Button
@@ -28,7 +31,7 @@
 
 1. Open Command Prompt in your pc
 2. copy paste <code>git clone https://github.com/devansh9999/SciBot</code> and hit enter
-3. <code>cd SciBot</code>
+3. <code>cd Whatsapp-Bot</code>
 4. <code>npm install</code>
 5. <code>npm update</code>
 6. <code>npm start</code>
