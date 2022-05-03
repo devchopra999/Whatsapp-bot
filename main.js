@@ -225,7 +225,7 @@ const client = new Client({
   // authStrategy: new NoAuth(),
   takeoverOnConflict: true,
   takeoverTimeoutMs: 0,
-  puppeteer: { headless: true, args: ["--no-sandbox"]},
+  puppeteer: {executablePath: config.ppt_path, headless: true, ignoreDefaultArgs: ['--disable-extensions'],args: ["--no-sandbox"]},
   // authStrategy: new NoAuth()
   authStrategy: new LocalAuth()
   // session: config.session,
