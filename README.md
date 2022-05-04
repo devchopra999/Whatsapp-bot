@@ -52,4 +52,8 @@ _Send <code>!help</code> Anywhere._
 
 - [Discord](https://discord.gg/vE7aevtJr5)
 
+### Contribute :
+
+- [Paytm](https://paytm.me/MM-Vskc)
+
 
