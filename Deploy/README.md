@@ -28,7 +28,7 @@
 - Save it
 
 # Steps :
-
+#### Fork & Star this repository :D
 1. Open Command Prompt in your pc
 2. copy paste <code>git clone https://github.com/devansh9999/SciBot</code> and hit enter
 3. <code>cd Whatsapp-Bot</code>
