@@ -756,12 +756,13 @@ client.on("message_revoke_everyone", async (after, before) => {
   catch (error) {
     console.log(error);
   }
+
   // await temp_chat.sendMessage("w");   
   // console.log("\n\nhere");
   // console.log(data.show);
 
   //SENDING REVOKED MSG
-
+  if(typeof data!='undefined'){
   if (data.show) {
     if (before) {
       const chat = await before.getChat();
@@ -776,8 +777,19 @@ client.on("message_revoke_everyone", async (after, before) => {
           "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
         );
       }
+      // else if (
+      //   before.fromMe !== true &&
+      //   before.hasMedia !== true &&
+      //   before.author == undefined &&
+      //   config.enable_delete_alert == "true"
+      // ) {
+      //   chat.sendMessage(
+      //     "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
+      //   );
+      // }
     }
   }
+}
 }
 });
 
