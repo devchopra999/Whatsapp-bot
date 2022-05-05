@@ -56,7 +56,7 @@ _Send <code>!help</code> Anywhere._
 
 - <a href="https://paytm.me/Cyr-V4u" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Paytm_logo.png" alt="Paytm" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 <details>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<summary>QR</summary>
+<summary>QR</summary>
 
 <a href="https://paytm.me/Cyr-V4u" target="_blank"><img src="https://telegra.ph/file/48afdcf0701b3ea7ab273.jpg" alt="Paytm QR" style="height: 160px !important;width: 200px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 </details>
