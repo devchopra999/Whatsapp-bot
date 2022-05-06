@@ -762,6 +762,7 @@ client.on("message_revoke_everyone", async (after, before) => {
   // console.log(data.show);
 
   //SENDING REVOKED MSG
+  try{
   if(typeof data!='undefined'){
   if (data.show) {
     if (before) {
@@ -790,6 +791,9 @@ client.on("message_revoke_everyone", async (after, before) => {
     }
   }
 }
+  }catch (error){
+    console.log(error);
+  }
 }
 });
 

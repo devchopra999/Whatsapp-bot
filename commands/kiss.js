@@ -28,6 +28,7 @@ const img2=await mentions[1].getProfilePicUrl();
 const chat= await msg.getChat();
 console.log(parseInt(data_level));
 if(parseInt(data_level)>=2||cmd_user.isMe){
+    try{
     const card =canvacord.Canvacord
     // .trash(image)
     .kiss(img1,img2)
@@ -36,6 +37,9 @@ if(parseInt(data_level)>=2||cmd_user.isMe){
         chat.sendMessage(RankCard);
         // canvacord.write(buffer, "spotify.png");
     });
+}catch(error){
+    console.log(error);
+}
 }else{
     await msg.reply("_This Feature Unlocks at Level 2_\n_Type *!lvl* For Your Current Level_");
   }
