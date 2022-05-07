@@ -1,6 +1,6 @@
 # These are supported funding model platforms
 
 github: [octocat, surftocat]
-patreon: octocat
+patreon: devansh_scimitar
 tidelift: npm/octo-package
 custom: ["https://www.patreon.com/devansh_scimitar", octocat.com]
