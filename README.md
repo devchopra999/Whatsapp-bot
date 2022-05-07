@@ -52,7 +52,7 @@ _Send <code>!help</code> Anywhere._
 
 - [Discord](https://discord.gg/vE7aevtJr5)
 
-### Contribute :
+### Support :
 
 - <a href="https://paytm.me/sB-a4qg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Paytm_logo.png" alt="Paytm" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 <details>
