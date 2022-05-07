@@ -763,7 +763,7 @@ client.on("message_revoke_everyone", async (after, before) => {
 
   //SENDING REVOKED MSG
   try{
-  if(typeof data!='undefined'){
+  if(typeof data!='undefined'&& typeof data!=null){
   if (data.show) {
     if (before) {
       const chat = await before.getChat();
