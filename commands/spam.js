@@ -2,6 +2,7 @@
 const Levels = require("discord-xp");
 //jshint esversion:8
 const {MessageMedia} = require('whatsapp-web.js');
+const config = require("../config");
 
 const execute = async (client,msg,args) => {
 
@@ -30,10 +31,13 @@ if(parseInt(data_level)>=1||cmd_user.isMe){
     let contact=await msg.getContact();
     if(contact.isMyContact || contact.isMe){
     let count = Number(args.shift());
-    if(count>10){
+    count=parseInt(count);
+    console.log(count);
+    if(config.spam_lmt=="ON"&&count>10){
+        console.log("working");
         count=parseInt(count);
         count=10;
-        await client.sendMessage("*Sorry, you are not allowed to spam a text more than 10 times*");
+        await client.sendMessage(idk,"*Sorry, you are not allowed to spam a text more than 10 times*");
         return 0;
     }
     if (isNaN(count)) {
@@ -60,12 +64,27 @@ if(parseInt(data_level)>=1||cmd_user.isMe){
                 await client.sendMessage(idk, new MessageMedia(media.mimetype, media.data, media.filename), { sendMediaAsSticker: sticker });
         } 
         else if(!quotedMsg.body.toLowerCase().startsWith("!all") && !quotedMsg.body.toLowerCase().startsWith("! all") && !quotedMsg.body.toLowerCase().startsWith("! findtags") && !quotedMsg.body.toLowerCase().startsWith("!findtags")) {
-            for (let i = 0; i < count; i++)
+            // if(config.spam_lmt=="ON"&&count>10){
+            //     count=parseInt(count);
+            //     count=10;
+            //     await client.sendMessage(idk,"*Sorry, you are not allowed to spam a text more than 10 times*");
+            //     return 0;
+            // }
+            
+            for (let i = 0; i < count; i++){
                 await client.sendMessage(idk, quotedMsg.body);
+            }
         }
     }
     else {
         if (args.length) {
+            // count=parseInt(count);
+            // if(config.spam_lmt=="ON"&&count>10){
+                
+            //     count=10;
+            //     await client.sendMessage(idk,"*Sorry, you are not allowed to spam a text more than 10 times*");
+            //     return 0;
+            // }
             let text = args.join(' ');
             if(text.toLowerCase()!="!all" && text.toLowerCase()!="! all" && text.toLowerCase()!="!findtags" && text.toLowerCase()!="! findtags")
             for (let i = 0; i < count; i++)

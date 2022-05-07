@@ -14,4 +14,5 @@ module.exports = {
   userbot:process.env.USER_BOT||false,
   ppt_path:process.env.Puppeteer_Path||"",
   dm_del:process.env.DM_DELETE_ALERT || "ON",
+  spam_lmt:process.env.SPAM_LIMIT || "ON",
 };
