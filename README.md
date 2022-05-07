@@ -20,7 +20,7 @@
 - **ocr** - Extract Text from Image
 - **info** - Get Forward Count & Device it was sent from information about any message. 
 - **MEMES** - This bot contains a looot of commands to make memes instanly on your friends. Type !help and try them all
-- ...and the list goes on
+- [...and the list goes on](https://github.com/devansh9999/Whatsapp-bot/blob/main/commands_info/Commands.md)
 
 
 
