@@ -50,7 +50,8 @@ _Send <code>!help</code> Anywhere._
 
 ### Connect :
 
-- [Discord](https://discord.gg/vE7aevtJr5)
+- <a href="https://t.me/SciBot_Whatsapp" target="_blank"><img src="https://images.macrumors.com/t/yMMf-bY_9Mm9UdPbxEQi7RRhRtg=/1600x/article-new/2017/05/Telegram-app.jpg" alt="Paytm" style="height: 55px !important;width: 120px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
 
 ### Support :
 
