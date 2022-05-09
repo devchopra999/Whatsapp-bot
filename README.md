@@ -3,6 +3,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/devansh9999/whatsapp-bot/badge)](https://www.codefactor.io/repository/github/devansh9999/whatsapp-bot)
 
 [![Deploy with Heroku](https://www.herokucdn.com/deploy/button.svg "Deploy with Heroku")](https://heroku.com/deploy?template=https://github.com/devansh9999/Whatsapp-bot "Deploy with Heroku")<br>
+[HEROKU DEPLOY GUIDE](https://github.com/devansh9999/Whatsapp-bot/blob/main/Deploy/heroku%20(recommended)/README.md)
 ### My Favorite Commands :
 
 - **pmpermit** - Permission for direct message
