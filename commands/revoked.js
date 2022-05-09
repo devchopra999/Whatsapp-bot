@@ -80,7 +80,7 @@ if(parseInt(data_level)>=3||cmd_user.isMe){
 
 module.exports = {
     name: 'revoked', //name of the module
-    description: 'ss ', // short description of what this command does
+    description: 'Control deleted messages of members of a group', // short description of what this command does
     command: '!revoked', //command with prefix. Ex command: '!test'
     commandType: 'group', // admin|info|plugin
     isDependent: false, //whether this command is related/dependent to some other command

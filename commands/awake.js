@@ -8,7 +8,7 @@ module.exports = {
   name: "Awake",
   description: "Stay online always !",
   command: "!awake",
-  commandType: "lhb",
+  commandType: "info",
   isDependent: false,
   help: undefined,
   execute,

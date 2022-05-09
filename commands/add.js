@@ -114,10 +114,10 @@ if(parseInt(data_level)>=3||cmd_user.isMe){
 };
 
 module.exports = {
-    name: 'a', //name of the module
-    description: 'add someone to the group(ONLY IF SCIMITAR ALLOWS YOU TO)', // short description of what this command does
-    command: '!a', //command with prefix. Ex command: '!test'
+    name: 'add', //name of the module
+    description: 'add someone to the group (ADMIN ONLY)', // short description of what this command does
+    command: '!add', //command with prefix. Ex command: '!test'
     commandType: 'group', // admin|info|plugin
     isDependent: false, //whether this command is related/dependent to some other command
-    help: 'HELP: !a\n\n```Just use !a while quoting a message of someone you want to add\nOR\nuse !a while quoting a contact card to add that contact```', // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+    help: 'HELP: !add\n\n```Just use !add while quoting a message of someone you want to add\nOR\nuse !a while quoting a contact card to add that contact```', // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
     execute};

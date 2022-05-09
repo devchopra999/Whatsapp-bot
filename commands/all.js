@@ -56,11 +56,11 @@ const execute = async (client,msg,args) => {
   }; 
       
     module.exports = {
-      name: "tag_everyone", //name of the module
+      name: "all", //name of the module
       description: "tag everyone in a group", // short description of what this command does
       command: "!all", //command with prefix. Ex command: '!test'
       commandType: "group", //
       isDependent: false, //whether this command is related/dependent to some other command
-      help: "Type !everyone in the chat to tag all group members", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+      help: "Type !all in the chat to tag all group members", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
       execute,
     };
