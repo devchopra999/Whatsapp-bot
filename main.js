@@ -223,8 +223,8 @@ const sessionData={"WABrowserId":"\"tEqD7iE7LJ60G8OZ3VY4KA==\"","WASecretBundle"
 
 const client = new Client({
   // authStrategy: new NoAuth(),
-  takeoverOnConflict: true,
-  takeoverTimeoutMs: 0,
+//   takeoverOnConflict: true,
+//   takeoverTimeoutMs: 0,
   // puppeteer: {executablePath: config.ppt_path, headless: true, ignoreDefaultArgs: ['--disable-extensions'],args: ["--no-sandbox"]},
   puppeteer: { headless: true,args: ["--no-sandbox"]},
   // authStrategy: new NoAuth()
