@@ -56,6 +56,9 @@ _Send <code>!help</code> Anywhere._
 - <a href="https://t.me/SciBot_Whatsapp" target="_blank"><img src="https://images.macrumors.com/t/yMMf-bY_9Mm9UdPbxEQi7RRhRtg=/1600x/article-new/2017/05/Telegram-app.jpg" alt="Paytm" style="height: 55px !important;width: 120px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 
+### Credits :
+- SciBot uses pmpermit, directlink, shorten, carbon, ocr, qr, spam(structure) and heroku deployment from Tuhinpal's bot, you can follow him at [Tuhinpal](https://github.com/tuhinpal)
+
 ### Support :
 
 - <a href="https://paytm.me/sB-a4qg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Paytm_logo.png" alt="Paytm" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
