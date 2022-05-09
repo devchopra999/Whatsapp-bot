@@ -39,5 +39,13 @@
 13. fill the <code>SESSION_KEY</code> & <code>SESSION_URL</code>(compulsory) and the <code>MONGODB_URL</code>(for privacy) everything else is optional and already filled with defaults
 14. click on deploy and your bot should be ready to use in a few minutes
 
+
+#### Setup cron-job to avoid idling:
+1. login/signup at [cronjobs](https://console.cron-job.org/login)
+2. click create cronjob
+3. add your heroku app url in url (something like this : </code>http://mybot.herokuapp.com</code>
+4. set execution schedule to every 15 mins
+5. click create
+
 ## Need Help?:
 - <a href="https://t.me/SciBot_Whatsapp" target="_blank"><img src="https://images.macrumors.com/t/yMMf-bY_9Mm9UdPbxEQi7RRhRtg=/1600x/article-new/2017/05/Telegram-app.jpg" alt="Paytm" style="height: 55px !important;width: 120px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
