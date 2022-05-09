@@ -7,7 +7,7 @@ clean();
 
 const client = new Client({
   puppeteer: { headless: true, args: ["--no-sandbox"] },
-  authStrategy: new LocalAuth({ clientId: "SciBot" }),
+  authStrategy: new LocalAuth({ clientId: "whatsbot" }),
 });
 
 let password = null;
