@@ -225,7 +225,8 @@ const client = new Client({
   // authStrategy: new NoAuth(),
   takeoverOnConflict: true,
   takeoverTimeoutMs: 0,
-  puppeteer: {executablePath: config.ppt_path, headless: true, ignoreDefaultArgs: ['--disable-extensions'],args: ["--no-sandbox"]},
+  // puppeteer: {executablePath: config.ppt_path, headless: true, ignoreDefaultArgs: ['--disable-extensions'],args: ["--no-sandbox"]},
+  puppeteer: { headless: true,args: ["--no-sandbox"]},
   // authStrategy: new NoAuth()
   authStrategy: new LocalAuth({ clientId: "whatsbot" })
   // session: config.session,
@@ -345,7 +346,7 @@ videos.forEach( async function ( v ) {
       const chat = await msg.getChat();
       const idk = chat.id._serialized;
       var YD = new YoutubeMp3Downloader({
-        "ffmpegPath": "./ffmpeg.exe",        // FFmpeg binary location
+        "ffmpegPath": "/usr/bin/ffmpeg",        // FFmpeg binary location
         "outputPath": "./",    // Output file location (default: the home directory)
         "youtubeVideoQuality": "highestaudio",  // Desired video quality (default: highestaudio)
         "queueParallelism": 2,                  // Download parallelism (default: 1)
