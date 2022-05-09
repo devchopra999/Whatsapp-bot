@@ -26,13 +26,25 @@
       "description": "Default Translation Language",
       "value": "en"
     },
-    "ENABLE_DELETE_ALERT": {
-      "description": "If true & if someone delete message in PM, Bot will send the deleted message in that chat (Exclude Media)",
+    "DM_DELETE_ALERT": {
+      "description": "show deleted messages in dm or not : ON or OFF",
       "value": "true"
     },
     "OCR_SPACE_API_KEY": {
       "description": "Get it from https://ocr.space/OCRAPI",
       "value": ""
+    },
+    "SPAM_LIMIT":{
+    "description": "limit the number of times you can spam a text using !spam : ON or OFF",
+    "value": "ON"
+    },
+    "GROUP_DELETE_ALERT":{
+      "description":"show deleted messages in a group or not : true or false",
+      "value": "true"
+    },
+    "USER_BOT":{
+      "description": "do you want this bot to be a userbot? : true or false",
+      "value": "true"
     }
   }
 }
