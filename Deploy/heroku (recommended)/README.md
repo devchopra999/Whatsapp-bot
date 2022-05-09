@@ -1,7 +1,7 @@
 # Prerequisites :
 - Nodejs & npm<br>download from here <code>https://nodejs.org/</code>
 
-<h1>You can skip to step 3 but your bot may run out of memory if everyone is using the database and ocr api that i have provided in example.env already</h1>
+<h1>You can skip the 2 steps below but using the database and ocr api that i have provided in example.env already isn't advised for your privacy purpose</h1>
 
 ### 1. You need a MongoDB, You can create it for free. Follow these steps 👇
 - Open https://cloud.mongodb.com
@@ -22,21 +22,22 @@
 - Register on <code>https://ocr.space/ocrapi/freekey</code> for your free ocr api key
 - you'll receive an email containing the api key. Save that, you'll need this soon
 
-### 3. Setting up Env Variables
-- There is a file named example.env, rename it to .env
-- now enter your mongodb url and ocr space api key at their respective positions and let everything else stay as it is
-- Save it
-
 # Steps :
 #### Fork & Star this repository :D
 1. Open Command Prompt in your pc
-2. copy paste <code>git clone https://github.com/devansh9999/SciBot</code> and hit enter
+2. copy paste <code>git clone https://github.com/devansh9999/Whatsapp-bot</code> and hit enter
 3. <code>cd Whatsapp-Bot</code>
 4. <code>npm install</code>
-5. <code>npm update</code>
-6. <code>npm start</code>
-7. Scan the QR code using your whatsapp to link the bot and wait until you see <code>Bot has been started</code>
-8. press Ctrl+C twice
-9. <code>npm install forever -g</code>
-10. <code>forever start main.js</code>
-11. Now you can close the command pompt and the bot should be working fine
+5. <code>npm run gentoken</code>
+6. choose a password, you have to paste it in <code>SESSION_KEY</code> while deploying it to heroku
+7. Scan the QR and wait until you see <code>Session has been created</code>
+8. open Whatsapp-bot folder and you'll see a session.secure file, upload it to any of your github public repo
+9. click on session.secure once it's uploaded in ur public repo and then right-click on <code>view raw</code> and then copy link address
+10. you have to paste it in <code>SESSION_URL</code> while deploying it to heroku
+11. go to https://github.com/devansh9999/Whatsapp-bot
+12. scroll down and click on <code> deploy to heroku</code>
+13. fill the <code>SESSION_KEY</code> & <code>SESSION_URL</code>(compulsory) and the <code>MONGODB_URL</code>(for privacy) everything else is optional and already filled with defaults
+14. click on deploy and your bot should be ready to use in a few minutes
+
+## Need Help?:
+- <a href="https://t.me/SciBot_Whatsapp" target="_blank"><img src="https://images.macrumors.com/t/yMMf-bY_9Mm9UdPbxEQi7RRhRtg=/1600x/article-new/2017/05/Telegram-app.jpg" alt="Paytm" style="height: 55px !important;width: 120px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
