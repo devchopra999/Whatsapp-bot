@@ -6,6 +6,7 @@ module.exports = {
   //   process.env.SESSION ||
   //     fs.readFileSync(__dirname + "/session.json", { encoding: "utf8" })
   // ),
+  session_key: process.env.SESSION_KEY,
   pmpermit_enabled: process.env.PMPERMIT_ENABLED || "true",
   mongodb_url: process.env.MONGODB_URL || process.env.MONGO_URL || "",
   default_tr_lang: process.env.DEFAULT_TR_LANG || "en",
