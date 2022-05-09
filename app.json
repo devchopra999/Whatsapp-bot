@@ -19,8 +19,8 @@
       "value": "true"
     },
     "MONGODB_URL": {
-      "description": "MongoDB URL, Get it for free from cloud.mongodb.com",
-      "value": ""
+      "description": "MongoDB URL, Get it for free from cloud.mongodb.com, make sure you use your own database since everyone can access this prefilled database below which is connected to ur whatsapp messages",
+      "value": "mongodb+srv://SciBot:20MtCh1mUMInejK5@cluster0.o3x7q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     },
     "DEFAULT_TR_LANG": {
       "description": "Default Translation Language",
@@ -32,7 +32,7 @@
     },
     "OCR_SPACE_API_KEY": {
       "description": "Get it from https://ocr.space/OCRAPI",
-      "value": ""
+      "value": "K81744199088957"
     },
     "SPAM_LIMIT":{
     "description": "limit the number of times you can spam a text using !spam : ON or OFF",
