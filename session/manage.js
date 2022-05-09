@@ -13,11 +13,11 @@ require("dotenv").config();
 let base = `${__dirname}/../.wwebjs_auth/`;
 
 let excludedDir = [
-  "session-scibot/Default/Cache",
-  "session-scibot/Default/Code Cache",
-  "session-scibot/Default/Code Storage",
-  "session-scibot/Default/blob_storage",
-  "session-scibot/Default/Service Worker",
+  "session-whatsbot/Default/Cache",
+  "session-whatsbot/Default/Code Cache",
+  "session-whatsbot/Default/Code Storage",
+  "session-whatsbot/Default/blob_storage",
+  "session-whatsbot/Default/Service Worker",
 ];
 
 module.exports = {
