@@ -4,9 +4,8 @@
   "description": "A Whatsapp bot compatible with MultiDevice",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
-    "gentoken": "node session/genToken.js",
-    "gentokenlite": "node session/genTokenLite.js"
+    "start": "node startProcess.js",
+    "gentoken": "node session/genToken.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
     "@iamtraction/google-translate": "^1.1.2",
     "axios": "^0.21.0",
     "canvacord": "^5.2.3",
+    "adm-zip": "^0.5.9",
     "child_process": "^1.0.2",
     "chrome": "^0.1.0",
     "discord-xp": "^1.1.16",

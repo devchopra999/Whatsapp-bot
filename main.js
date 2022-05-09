@@ -227,7 +227,7 @@ const client = new Client({
   takeoverTimeoutMs: 0,
   puppeteer: {executablePath: config.ppt_path, headless: true, ignoreDefaultArgs: ['--disable-extensions'],args: ["--no-sandbox"]},
   // authStrategy: new NoAuth()
-  authStrategy: new LocalAuth()
+  authStrategy: new LocalAuth({ clientId: "SciBot" })
   // session: config.session,
 }); 
 
