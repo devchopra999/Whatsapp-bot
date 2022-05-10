@@ -36,12 +36,12 @@ const execute = async (client,msg,args) => {
             // text += `@${participant.id.user} `;
         }
   
-        // await chat.sendMessage(text + `\n\n*This Message is Automated by SciBot Because of !everyone command*`, { mentions });
+        // await chat.sendMessage(text + `\n\n*This Message is Automated by Trina Because of !everyone command*`, { mentions });
         if(args.length){
           let message =args.join(" ");
           await chat.sendMessage("```"+message+"```", { mentions });
         }else{
-        await chat.sendMessage(text +`\n\n_This Message is Automated by SciBot Because of !all command_`, { mentions });
+        await chat.sendMessage(text +`\n\n_This Message is Automated by Trina Because of !all command_`, { mentions });
         }
       
     }
