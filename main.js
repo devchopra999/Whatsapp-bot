@@ -381,7 +381,7 @@ videos.forEach( async function ( v ) {
     } else {
       await msg.reply("_This Feature Unlocks at Level 10_\n_Type *!lvl* For Your Current Level_");
     }
-  }else if(!msg.fromMe&& !config.userbot){
+  }else if(!msg.fromMe&& config.userbot=="false"){
     if (msg.body.startsWith("!download")) {
 
       //discord-xp
@@ -488,7 +488,7 @@ videos.forEach( async function ( v ) {
       // return [question,answer];
     }
     makeGetRequest("https://g.tenor.com/v1/search?q=" + command + "&key=9Q40NJG3T240&limit=100");
-  }else if (!msg.fromMe&& !config.userbot){
+  }else if (!msg.fromMe&& config.userbot=="false"){
     if (msg.body.startsWith("#")) {
       let args = msg.body.slice(1).trim().split(/ +/g);
       let command = args.shift().toLowerCase();
@@ -517,7 +517,7 @@ videos.forEach( async function ( v ) {
   }
   if (msg.body.startsWith('!NumbersGame')&&msg.fromMe) {
     await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
-  }else if(!msg.fromMe&& !config.userbot){
+  }else if(!msg.fromMe&& config.userbot=="false"){
     await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
   }
    if (msg.body.startsWith('!RiddlesGame')&&msg.fromMe) {
@@ -536,7 +536,7 @@ videos.forEach( async function ( v ) {
       // return [question,answer];
     }
     makeGetRequest("https://ibk-riddles-api.herokuapp.com/?ref=https://githubhelp.com")
-  }else if(!msg.fromMe&& !config.userbot){
+  }else if(!msg.fromMe&& config.userbot=="false"){
     async function makeGetRequest(Link) {
 
       let res = await axios.get(Link);
@@ -559,7 +559,7 @@ videos.forEach( async function ( v ) {
   //   var mentions = msg.getMentions();
   //   await minigames.addGameChat(msg._getChatId(), new MAFIA(msg, client, contact.id, mentions));
   // }
-    if (msg.body.startsWith('!ttt')&&!msg.fromMe&&!config.userbot) {
+    if (msg.body.startsWith('!ttt')&&!msg.fromMe&&config.userbot=="false") {
     var contact = await msg.getContact();
     var mentions = await msg.getMentions();
     console.log("Mentions[0]: " + JSON.stringify(mentions[0]));
@@ -630,7 +630,7 @@ client.on("message_create", async (msg) => {
       } catch (error) {
         console.log(error);
       }
-    }else if(!msg.fromMe&& !config.userbot){
+    }else if(!msg.fromMe&& config.userbot=="false"){
       try {
         const chat=await msg.getChat();
         var user = await msg.getContact();
