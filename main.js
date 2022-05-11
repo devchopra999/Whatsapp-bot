@@ -517,7 +517,7 @@ videos.forEach( async function ( v ) {
   }
   if (msg.body.startsWith('!NumbersGame')&&msg.fromMe) {
     await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
-  }else if(!msg.fromMe&& config.userbot=="false"){
+  }else if(msg.body.startsWith('!NumbersGame')&&!msg.fromMe&& config.userbot=="false"){
     await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
   }
    if (msg.body.startsWith('!RiddlesGame')&&msg.fromMe) {
@@ -536,7 +536,7 @@ videos.forEach( async function ( v ) {
       // return [question,answer];
     }
     makeGetRequest("https://ibk-riddles-api.herokuapp.com/?ref=https://githubhelp.com")
-  }else if(!msg.fromMe&& config.userbot=="false"){
+  }else if(msg.body.startsWith('!RiddlesGame')&&!msg.fromMe&& config.userbot=="false"){
     async function makeGetRequest(Link) {
 
       let res = await axios.get(Link);
