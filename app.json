@@ -5,7 +5,7 @@
   
   "keywords": ["SciBot", "whatsapp-bot", "whatsapp"],
 
-  "success_url": "https://devansh-scimitar.me/Whatsapp-Bot",
+  "success_url": "https://devansh-scimitar.me/Whatsapp-bot",
   "stack": "container",
   "buildpacks": [
     {
