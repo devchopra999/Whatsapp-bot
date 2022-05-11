@@ -5,6 +5,11 @@
   
   "keywords": ["SciBot", "whatsapp-bot", "whatsapp"],
   "stack": "container",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
+    }
+  ],
   "env": {
     "SESSION_KEY": {
       "description": "Session encryption password",
