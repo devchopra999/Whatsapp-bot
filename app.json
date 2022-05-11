@@ -4,8 +4,8 @@
   "repository": "https://github.com/devansh9999/Whatsapp-bot",
   
   "keywords": ["SciBot", "whatsapp-bot", "whatsapp"],
-  "website": "https://devansh-scimitar.me/",
-  "success_url": "/Whatsapp-Bot",
+
+  "success_url": "https://devansh-scimitar.me/Whatsapp-Bot",
   "stack": "container",
   "buildpacks": [
     {
