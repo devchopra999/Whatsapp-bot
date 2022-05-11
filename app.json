@@ -2,7 +2,7 @@
   "name": "SciBot",
   "description": "A Whatsapp bot compatible with MultiDevice (MD)",
   "repository": "https://github.com/devansh9999/Whatsapp-bot",
-  
+  "website": "https://devansh-scimitar.me/Whatsapp-bot/"
   "keywords": ["SciBot", "whatsapp-bot", "whatsapp"],
   "stack": "container",
   "buildpacks": [
@@ -51,8 +51,5 @@
       "description": "do you want this bot to be a userbot? : true or false",
       "value": "true"
     }
-  },
-  {
-  "website": "https://devansh-scimitar.me/Whatsapp-bot/"
-}
+  }
 }
