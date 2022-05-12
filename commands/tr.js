@@ -61,7 +61,7 @@ if(parseInt(data_level)>=2||cmd_user.isMe){
     if (data == "error") {
         await client.sendMessage(
             idk,
-            `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened while translate```"
+            `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened while translating```"
         );
     } else {
         await client.sendMessage(
