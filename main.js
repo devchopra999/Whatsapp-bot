@@ -65,7 +65,7 @@ class MAFIA extends MiniGame {
   }
   async procMessage(message) {
 
-    await this.client.sendMessage(this.player1._serialized, 'Hemlo Bsdk, Successful Run');
+    await this.client.sendMessage(this.player1._serialized, 'Hello, Successful Run');
     // this.gameOver();
 
 
