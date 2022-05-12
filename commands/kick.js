@@ -83,5 +83,5 @@ module.exports = {
     command: '!kick', //command with prefix. Ex command: '!test'
     commandType: 'group', // admin|info|plugin
     isDependent: false, //whether this command is related/dependent to some other command
-    help: 'HELP: !r\n\n```Just use !kick while quoting the message of someone you want to remove```', // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+    help: 'HELP: !kick\n\n```Just use !kick while quoting the message of someone you want to remove```', // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
     execute};
