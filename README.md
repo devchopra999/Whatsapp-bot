@@ -57,7 +57,8 @@ _Send <code>!help</code> Anywhere._
 
 
 ### Credits :
-- SciBot uses pmpermit, directlink, shorten, carbon, ocr, qr, spam(structure) and heroku deployment from Tuhinpal's bot, you can follow him at [Tuhinpal](https://github.com/tuhinpal)
+- [Pedro S. Lopez](https://github.com/pedroslopez)
+- [Tuhinpal](https://github.com/tuhinpal)
 
 ### Support :
 
