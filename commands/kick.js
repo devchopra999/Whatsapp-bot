@@ -79,7 +79,7 @@ if(parseInt(data_level)>=3||cmd_user.isMe){
 
 module.exports = {
     name: 'kick', //name of the module
-    description: 'remove someone from the group(ONLY IF SCIMITAR ALLOWS YOU TO)', // short description of what this command does
+    description: 'remove someone from the group', // short description of what this command does
     command: '!kick', //command with prefix. Ex command: '!test'
     commandType: 'group', // admin|info|plugin
     isDependent: false, //whether this command is related/dependent to some other command
