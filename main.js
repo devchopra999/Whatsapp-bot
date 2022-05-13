@@ -1,6 +1,6 @@
 //jshint esversion:8
 const Levels = require("discord-xp");
-Levels.setURL("mongodb+srv://Devansh:DevIsNona@cluster0.1swkf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
 const canvacord = require("canvacord");
 
 const express = require("express");
@@ -17,7 +17,7 @@ const qrcode = require('qrcode-terminal');
 var YoutubeMp3Downloader = require("youtube-mp3-downloader");
 const path = require("path");
 const yts = require( 'yt-search' )
-
+Levels.setURL(config.mongodb_url);
 // chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil)
 
 //MINIGAME
