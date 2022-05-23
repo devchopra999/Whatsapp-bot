@@ -39,10 +39,10 @@ if(parseInt(data_level)>=2||cmd_user.isMe){
 };
 
 module.exports = {
-    name: 'changemymind', //name of the module
+    name: 'cmm', //name of the module
     description: 'Change My Mind Meme', // short description of what this command does
-    command: '!changemymind', //command with prefix. Ex command: '!test'
+    command: '!cmm', //command with prefix. Ex command: '!test'
     commandType: 'reactions', // admin|info|plugin
     isDependent: false, //whether this command is related/dependent to some other command
-    help: "*Change My Mind*\n_Reply *!changemymind* To Someone's Message_", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+    help: "*Change My Mind*\n_Reply *!cmm* To Someone's Message_", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
     execute};
