@@ -41,8 +41,8 @@ if(parseInt(data_level)>=1||cmd_user.isMe){
 module.exports = {
     name: 'jokeoverhead', //name of the module
     description: 'joke over head meme', // short description of what this command does
-    command: '!jokeoverhead', //command with prefix. Ex command: '!test'
+    command: '!joh', //command with prefix. Ex command: '!test'
     commandType: 'reactions', // admin|info|plugin
     isDependent: false, //whether this command is related/dependent to some other command
-    help: "*Joke Over Head*\n_Reply *!joke* To Someone's Message To Make Joke Over Head Meme On Them", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+    help: "*Joke Over Head*\n_Reply *!joh* To Someone's Message To Make Joke Over Head Meme On Them", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
     execute};
