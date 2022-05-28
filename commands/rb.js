@@ -3,7 +3,7 @@ const axios = require('axios');
 const FormData = require('form-data');
 const fs = require('fs');
 const path = require('path');
-const config = require("./config");
+const config = require("../config");
 const { MessageMedia } = require("whatsapp-web.js");
 // const stream = require('stream');
 const execute = async (client,msg,args) => {
