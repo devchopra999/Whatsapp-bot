@@ -21,6 +21,10 @@
       "description": "session.secure public url (It is safe because it is encrypted, But still if you want maybe you can create some sort of authorization stuff)",
       "value": ""
     },
+    "REMOVE_BG_API_KEY":{
+      "description": "get it for free from https://www.remove.bg/api#remove-background",
+      "value": ""
+    },
     "PMPERMIT_ENABLED": {
       "description": "Enable Pmpermit write true or false only",
       "value": "true"
