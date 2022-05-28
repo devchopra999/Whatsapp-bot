@@ -16,4 +16,5 @@ module.exports = {
   ppt_path:process.env.Puppeteer_Path||"",
   dm_del:process.env.DM_DELETE_ALERT || "ON",
   spam_lmt:process.env.SPAM_LIMIT || "ON",
+  RG:process.env.REMOVE_BG_API_KEY||"",
 };
