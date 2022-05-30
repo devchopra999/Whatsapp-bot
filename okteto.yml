@@ -1,5 +1,5 @@
 docker:
   web: Dockerfile
  deploy:
-  npm start
+  -npm start
     
