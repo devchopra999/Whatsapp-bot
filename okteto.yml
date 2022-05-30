@@ -1,5 +1,0 @@
-docker:
-  web: Dockerfile
- deploy:
-  -npm start
-    
