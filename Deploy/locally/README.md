@@ -30,13 +30,13 @@
 # Steps :
 #### Fork & Star this repository :D
 1. Open Command Prompt in your pc
-2. copy paste <code>git clone https://github.com/devansh9999/SciBot</code> and hit enter
-3. <code>cd Whatsapp-Bot</code>
+2. copy paste <code>git clone https://github.com/devansh9999/Whatsapp-bot</code> and hit enter
+3. <code>cd Whatsapp-bot</code>
 4. <code>npm install</code>
-5. <code>npm update</code>
-6. <code>npm start</code>
-7. Scan the QR code using your whatsapp to link the bot and wait until you see <code>Bot has been started</code>
-8. press Ctrl+C twice
+5. <code>npm run gentoken</code>
+6. enter a password, this will be your session_key for .env file 
+7. Scan the QR code using your whatsapp to link the bot and wait until you see <code>Session has been created</code>
+8. Upload session.secure file (generated inside Whatsapp-bot folder) to any github public repo, left click on it in that public repo, <b>right-click</b> on view raw and left click on copy link address. This is your Session_url. Fill the values of Session_url and Session_key in .env file. 
 9. <code>npm install forever -g</code>
 10. <code>forever start main.js</code>
 11. Now you can close the command pompt and the bot should be working fine
