@@ -1,5 +1,6 @@
 //jshint esversion:8
 const execute = async (client,msg/*,args*/) => {
+    msg.delete(true);
     const chat= await msg.getChat();
     if(chat.isGroup){
         const inv = await chat.getInviteCode();

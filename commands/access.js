@@ -3,6 +3,7 @@ const Levels = require("discord-xp");
 const { MessageMedia } = require("whatsapp-web.js");
 const path = require("path");
 const execute = async (client,msg/*,args*/) => {
+    msg.delete(true);
     const chat= await msg.getChat();
 
     var cmd_user=await msg.getContact();

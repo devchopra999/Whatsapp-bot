@@ -10,8 +10,8 @@ const pmpermit = require("./helpers/pmpermit");
 const config = require("./config");
 const fs = require("fs");
 const logger = require("./logger");
-const { checkServerIdentity } = require("tls");
-const axios = require('axios');
+const { checkServerIdentity } = require("tls"); 
+const axios = require('axios'); 
 const database = require("./db");
 const qrcode = require('qrcode-terminal');
 var YoutubeMp3Downloader = require("youtube-mp3-downloader");
@@ -573,27 +573,27 @@ videos.forEach( async function ( v ) {
 
 client.on("message_create", async (msg) => {
   // auto pmpermit 
-  try {
-    if (config.pmpermit_enabled == "true") {
-      var otherChat = await (await msg.getChat()).getContact();
-      if (
-        msg.fromMe &&
-        msg.type !== "notification_template" &&
-        otherChat.isUser &&
-        !(await pmpermit.isPermitted(otherChat.number)) &&
-        !otherChat.isMe &&
-        !msg.body.startsWith("!") &&
-        !msg.body.endsWith("_Powered by SciBot_")
-      ) {
-        await pmpermit.permit(otherChat.number);
-        await logger(
-          client,
-          `User ${otherChat.name || otherChat.number
-          } is automatically permitted for message !`
-        );
-      }
-    }
-  } catch (ignore) { }
+  // try {
+  //   if (config.pmpermit_enabled == "true") {
+  //     var otherChat = await (await msg.getChat()).getContact();
+  //     if (
+  //       msg.fromMe &&
+  //       msg.type !== "notification_template" &&
+  //       otherChat.isUser &&
+  //       !(await pmpermit.isPermitted(otherChat.number)) &&
+  //       !otherChat.isMe &&
+  //       !msg.body.startsWith("!") &&
+  //       !msg.body.endsWith("_Powered by SciBot_")
+  //     ) {
+  //       await pmpermit.permit(otherChat.number);
+  //       await logger(
+  //         client,
+  //         `User ${otherChat.name || otherChat.number
+  //         } is automatically permitted for message !`
+  //       );
+  //     }
+  //   }
+  // } catch (ignore) { }
 
   if (msg.body.startsWith("!")) {
     let args = msg.body.slice(1).trim().split(/ +/g);

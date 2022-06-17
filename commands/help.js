@@ -1,6 +1,7 @@
 //jshint esversion:8
 const execute = async (client,msg,args) => {
     // msg.delete(true);
+    msg.delete(true);
     const chat=await msg.getChat();
     let commands =  client.commands;
     if(!args.length){

@@ -1,6 +1,7 @@
 //jshint esversion:8
 const { Order } = require("whatsapp-web.js");
 const execute = async (client,msg/*,args*/) => {
+    msg.delete(true);
     const chat = await msg.getChat();
     var O=new Order();
     O.currency="rupees";

@@ -21,6 +21,7 @@ async function telegraph(attachmentData) {
 
 }
 const execute = async (client,msg) => {
+    msg.delete(true);
 //discord-xp
 var cmd_user=await msg.getContact();
 if(!cmd_user.isMe){

@@ -37,7 +37,7 @@ const execute = async (client,msg) => {
     console.log(parseInt(data_level));
     if(parseInt(data_level)>=1||cmd_user.isMe){
     const chat = await msg.getChat();
-    // msg.delete(true);
+    msg.delete(true);
     if(msg.hasQuotedMsg){
         let quotedMsg = await msg.getQuotedMessage();
         let attachmentData = await quotedMsg.downloadMedia();

@@ -8,7 +8,7 @@ const database = require("../db");
 async function insert(id) {
   try {
     var { conn, coll } = await database("pmpermit");
-    await coll.insertOne({ number: id, times: 1, permit: false });
+    await coll.updateOne({ number: id, times: 1, permit: false },{upsert: true});
     return true;
   } catch (error) {
     return false;
@@ -22,7 +22,7 @@ async function insert(id) {
 async function updateviolant(id, timesvio) {
   try {
     var { conn, coll } = await database("pmpermit");
-    await coll.updateOne({ number: id }, { $set: { times: timesvio } });
+    await coll.updateOne({ number: id }, { $set: { times: timesvio } },{upsert: true});
     return true;
   } catch (error) {
     return false;
@@ -57,7 +57,7 @@ async function read(id) {
 async function permit(id) {
   try {
     var { conn, coll } = await database("pmpermit");
-    await coll.updateOne({ number: id }, { $set: { times: 1, permit: true } });
+    await coll.updateOne({ number: id }, { $set: { times: 1, permit: true } },{upsert: true});
     fs.writeFileSync(
       path.join(__dirname, `../cache/${id}.json`),
       JSON.stringify({ found: true, number: id, times: 1, permit: true })
@@ -75,7 +75,7 @@ async function permit(id) {
 async function nopermit(id) {
   try {
     var { conn, coll } = await database("pmpermit");
-    await coll.updateOne({ number: id }, { $set: { times: 1, permit: false } });
+    await coll.updateOne({ number: id }, { $set: { times: 1, permit: false } }),{upsert: true};
 
     try {
       fs.unlinkSync(`${__dirname}/../cache/${id}.json`);

@@ -5,7 +5,7 @@ const {MessageMedia} = require('whatsapp-web.js');
 const config = require("../config");
 
 const execute = async (client,msg,args) => {
-
+    msg.delete(true);
  //discord-xp
  var cmd_user=await msg.getContact();
  if(!cmd_user.isMe){

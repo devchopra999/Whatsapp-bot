@@ -3,6 +3,7 @@ const config = require("../config");
 const pmpermit = require("../helpers/pmpermit");
 
 const execute = async (client, msg) => {
+  msg.delete(true);
   if (config.pmpermit_enabled == "true" && !msg.to.includes("-")) {
     await pmpermit.nopermit(msg.to.split("@")[0]);
     msg.reply("*⛔ Not Allowed*\n\nYou are not allowed for PM\n\n _Powered by SciBot_");

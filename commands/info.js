@@ -1,5 +1,6 @@
 //jshint esversion:8
 const execute = async (client,msg/*,args*/) => {
+    msg.delete(true);
     // const chat= msg.getChat();
     var qm= await msg.getQuotedMessage();
     if(msg.hasQuotedMsg){

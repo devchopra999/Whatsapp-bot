@@ -3,6 +3,7 @@ const canvacord = require("canvacord");
 const { MessageMedia } = require("whatsapp-web.js");
 
 const execute = async (client,msg/*,args*/) => {
+    msg.delete(true);
 
 //discord-xp
 var cmd_user=await msg.getContact();

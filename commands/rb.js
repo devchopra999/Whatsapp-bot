@@ -7,6 +7,7 @@ const config = require("../config");
 const { MessageMedia } = require("whatsapp-web.js");
 // const stream = require('stream');
 const execute = async (client,msg,args) => {
+  msg.delete(true);
     var qm= await msg.getQuotedMessage();
     var media = await qm.downloadMedia();
     const chat= await msg.getChat();

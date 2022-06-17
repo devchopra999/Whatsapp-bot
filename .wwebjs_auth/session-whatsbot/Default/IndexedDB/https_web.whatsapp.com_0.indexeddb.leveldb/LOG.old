@@ -1,0 +1,5 @@
+2022/06/17-18:42:57.047 402c Creating DB E:\Whatsapp-bot\.wwebjs_auth\session-whatsbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2022/06/17-18:42:57.085 402c Reusing MANIFEST E:\Whatsapp-bot\.wwebjs_auth\session-whatsbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/06/17-18:43:49.099 13c4 Level-0 table #5: started
+2022/06/17-18:43:49.224 13c4 Level-0 table #5: 1073754 bytes OK
+2022/06/17-18:43:49.252 13c4 Delete type=0 #3

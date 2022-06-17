@@ -1,6 +1,7 @@
 const database = require("../db");
 const pmpermit = require("../helpers/pmpermit");
 const execute = async (client,msg/*,args*/) => {
+  // msg.delete(true);
     var temp_chat=await msg.getChat();
     await temp_chat.sendMessage("w");
     var temp_contact= await msg.getContact();

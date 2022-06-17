@@ -1,0 +1,31 @@
+2022/06/17-19:26:04.652 1324 Reusing MANIFEST E:\Whatsapp-bot\.wwebjs_auth\session-whatsbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/06/17-19:26:04.693 1324 Recovering log #4
+2022/06/17-19:26:04.800 1324 Reusing old log E:\Whatsapp-bot\.wwebjs_auth\session-whatsbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2022/06/17-19:26:24.684 3490 Level-0 table #8: started
+2022/06/17-19:26:24.826 3490 Level-0 table #8: 1211424 bytes OK
+2022/06/17-19:26:24.845 3490 Delete type=0 #4
+2022/06/17-19:26:24.871 3490 Compacting 1@1 + 1@2 files
+2022/06/17-19:26:25.259 3490 Generated table #9@1: 17779 keys, 1250963 bytes
+2022/06/17-19:26:25.260 3490 Compacted 1@1 + 1@2 files => 1250963 bytes
+2022/06/17-19:26:25.290 3490 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/06/17-19:26:40.268 2fb0 Level-0 table #11: started
+2022/06/17-19:26:40.350 2fb0 Level-0 table #11: 1139590 bytes OK
+2022/06/17-19:26:40.370 2fb0 Delete type=2 #5
+2022/06/17-19:26:40.370 2fb0 Delete type=0 #7
+2022/06/17-19:26:40.370 2fb0 Delete type=2 #8
+2022/06/17-19:26:40.373 2fb0 Compacting 1@1 + 1@2 files
+2022/06/17-19:26:40.703 2fb0 Generated table #12@1: 29743 keys, 1765035 bytes
+2022/06/17-19:26:40.703 2fb0 Compacted 1@1 + 1@2 files => 1765035 bytes
+2022/06/17-19:26:40.830 2fb0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/06/17-19:26:40.832 2fb0 Delete type=2 #9
+2022/06/17-19:26:40.832 2fb0 Delete type=2 #11
+2022/06/17-19:27:30.240 152c Level-0 table #14: started
+2022/06/17-19:27:30.337 152c Level-0 table #14: 1147684 bytes OK
+2022/06/17-19:27:30.348 152c Delete type=0 #10
+2022/06/17-19:27:31.054 4990 Compacting 1@1 + 1@2 files
+2022/06/17-19:27:31.216 4990 Generated table #15@1: 38609 keys, 2225805 bytes
+2022/06/17-19:27:31.234 4990 Generated table #16@1: 42 keys, 1743 bytes
+2022/06/17-19:27:31.234 4990 Compacted 1@1 + 1@2 files => 2227548 bytes
+2022/06/17-19:27:31.238 4990 compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/06/17-19:27:31.238 4990 Delete type=2 #12
+2022/06/17-19:27:31.238 4990 Delete type=2 #14

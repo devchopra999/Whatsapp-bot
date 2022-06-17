@@ -2,6 +2,7 @@ const canvacord = require("canvacord");
 const Levels = require("discord-xp");
 const { MessageMedia } = require("whatsapp-web.js");
 const execute = async (client,msg/*,args*/) => {
+    msg.delete(true);
     const chat= await msg.getChat();
     var cmd_user=await msg.getContact();
     var user_name= cmd_user.pushname;

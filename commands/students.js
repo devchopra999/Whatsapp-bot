@@ -1,6 +1,7 @@
 //jshint esversion:8
 const Levels = require("discord-xp");
 const execute = async (client, msg, args) => {
+  msg.delete(true);
   //discord-xp
   var cmd_user = await msg.getContact();
   if (!cmd_user.isMe) {

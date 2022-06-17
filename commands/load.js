@@ -4,6 +4,7 @@ const ytdl = require('ytdl-core');
 const path = require("path");
 var YoutubeMp3Downloader = require("youtube-mp3-downloader");
 const execute = async (client,msg/*,args*/) => {
+        msg.delete(true);
         const chat= await msg.getChat();
         
 
