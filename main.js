@@ -363,6 +363,7 @@ videos.forEach( async function ( v ) {
         console.log("location: " + data.file);
         const TN = await MessageMedia.fromUrl(v.image);
 
+        msg.delete(true);
         client.sendMessage(idk, TN, { caption: "*DOWNLOADED:* " + data.title });
         client.sendMessage(idk, aud, { sendAudioAsVoice: true });
 
