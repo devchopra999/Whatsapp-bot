@@ -3,6 +3,7 @@ Fun  | Description
   !download| downloads a youtube video as mp3
   !sticker | generate sticker from image/gif/video
   !image | generate image from sticker
+  |!react | react with any emoji on a message 
   !tr | translates text from any language to any language (default:english)
   !ud|gets dictionary meaning of words
   !spam |spam any image/video/gif/sticker/text
@@ -16,6 +17,7 @@ Fun  | Description
   !ping | responds with pong
   !b | shortcut to use some commands
   !ai | talk to the bot having an artificial brain
+  
 
   Games | Description
   ------|-------
