@@ -742,6 +742,29 @@ client.on("message_revoke_everyone", async (after, before) => {
   // }
 
   
+ try{
+  if (before) {
+    const chat = await before.getChat();
+    const contact = await before.getContact();
+  if (
+    before.fromMe !== true &&
+    before.hasMedia !== true &&
+    before.author == undefined &&
+    // config.enable_delete_alert == "true"&& 
+    config.dm_del=="ON"
+  ) {
+    console.log("REVOKED WORKING2");
+    chat.sendMessage(
+      "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
+    );
+  }
+  }
+    }catch (error){
+      console.log(error);
+    }
+  
+
+  
   temp_chat = await before.getChat();
   temp_contact = await before.getContact();
   if(!before.fromMe){
@@ -776,6 +799,7 @@ client.on("message_revoke_everyone", async (after, before) => {
         // before.author == undefined &&
         config.group_delete_alert == "true"
       ) {
+        console.log("REVOKED WORKING3");
         chat.sendMessage(
           "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
         );
@@ -783,21 +807,21 @@ client.on("message_revoke_everyone", async (after, before) => {
     }
   }
 
-  else if (before) {
-    const chat = await before.getChat();
-    const contact = await before.getContact();
-  if (
-    before.fromMe !== true &&
-    before.hasMedia !== true &&
-    before.author == undefined &&
-    // config.enable_delete_alert == "true"&& 
-    config.dm_del=="ON"
-  ) {
-    chat.sendMessage(
-      "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
-    );
-  }
-  }
+}
+if (before) {
+  const chat = await before.getChat();
+  const contact = await before.getContact();
+if (
+  before.fromMe !== true &&
+  before.hasMedia !== true &&
+  before.author == undefined &&
+  // config.enable_delete_alert == "true"&& 
+  config.dm_del=="ON"
+) {
+  chat.sendMessage(
+    "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
+  );
+}
 }
   }catch (error){
     console.log(error);
