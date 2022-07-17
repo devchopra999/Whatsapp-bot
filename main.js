@@ -783,21 +783,21 @@ client.on("message_revoke_everyone", async (after, before) => {
     }
   }
 
-}
-if (before) {
-  const chat = await before.getChat();
-  const contact = await before.getContact();
-if (
-  before.fromMe !== true &&
-  before.hasMedia !== true &&
-  before.author == undefined &&
-  // config.enable_delete_alert == "true"&& 
-  config.dm_del=="ON"
-) {
-  chat.sendMessage(
-    "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
-  );
-}
+  else if (before) {
+    const chat = await before.getChat();
+    const contact = await before.getContact();
+  if (
+    before.fromMe !== true &&
+    before.hasMedia !== true &&
+    before.author == undefined &&
+    // config.enable_delete_alert == "true"&& 
+    config.dm_del=="ON"
+  ) {
+    chat.sendMessage(
+      "_" + contact.pushname + " deleted this message_ 👇\n\n" + before.body
+    );
+  }
+  }
 }
   }catch (error){
     console.log(error);
