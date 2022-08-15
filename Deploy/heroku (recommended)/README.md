@@ -1,8 +1,10 @@
 # Prerequisites :
-- Nodejs & npm<br>download from here <code>https://nodejs.org/</code>
--Heroku cli<br> download from here <code> https://devcenter.heroku.com/categories/command-line </code>
+- Nodejs & npm<br>download from here <code>https://nodejs.org/</code><br>
+                                                                      
+- Heroku cli<br> download from here <code> https://devcenter.heroku.com/categories/command-line </code>
 
-<h1>You can skip the 2 steps below but using the database and ocr api that i have provided in example.env already isn't advised for your privacy purpose</h1>
+- Git<br> download from here <code>https://git-scm.com/download/win</code>
+<h1>You can skip the 2 steps below but doing that isn't advised for your privacy purpose</h1>
 
 ### 1. You need a MongoDB, You can create it for free. Follow these steps 👇
 - Open https://cloud.mongodb.com
