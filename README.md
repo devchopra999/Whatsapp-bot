@@ -58,6 +58,6 @@ _Send <code>!help</code> Anywhere._
 
 ### Credits :
 - [Pedro S. Lopez](https://github.com/pedroslopez): For his api
-- [Tuhinpal](https://github.com/tuhinpal): For a few plugins and heroku deployment
+- [Tuhinpal](https://github.com/tuhinpal): For a few plugins
 
 
