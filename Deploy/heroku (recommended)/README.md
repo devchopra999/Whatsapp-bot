@@ -1,5 +1,6 @@
 # Prerequisites :
 - Nodejs & npm<br>download from here <code>https://nodejs.org/</code>
+-Heroku cli<br> download from here <code> https://devcenter.heroku.com/categories/command-line </code>
 
 <h1>You can skip the 2 steps below but using the database and ocr api that i have provided in example.env already isn't advised for your privacy purpose</h1>
 
@@ -21,24 +22,18 @@
 ### 2. OCR API KEY
 - Register on <code>https://ocr.space/ocrapi/freekey</code> for your free ocr api key
 - you'll receive an email containing the api key. Save that, you'll need this soon
+### 3. REMOVE BACKGROUND API KEY
+- Sign up on https://www.remove.bg/dashboard
+- inside your dashboard go to <code>Api Keys</code> and press <code> Create new Api Key</code> and copy that api key, you'll need it 
 
 # Steps :
 #### Fork & Star this repository :D
-1. Open Command Prompt in your pc
-2. copy paste <code>git clone https://github.com/devansh9999/Whatsapp-bot</code> and hit enter
-3. <code>cd Whatsapp-Bot</code>
-4. <code>npm install</code>
-5. <code>npm run gentoken</code>
-6. choose a password, you have to paste it in <code>SESSION_KEY</code> while deploying it to heroku
-7. Scan the QR and wait until you see <code>Session has been created</code>
-8. open Whatsapp-bot folder and you'll see a session.secure file, upload it to any of your github public repo
-9. click on session.secure once it's uploaded in ur public repo and then right-click on <code>view raw</code> and then copy link address
-10. you have to paste it in <code>SESSION_URL</code> while deploying it to heroku
-11. go to https://github.com/devansh9999/Whatsapp-bot
-12. scroll down and click on <code> deploy to heroku</code>
-13. fill the <code>SESSION_KEY</code> & <code>SESSION_URL</code>(compulsory) and the <code>MONGODB_URL</code>(for privacy) everything else is optional and already filled with defaults
-14. click on deploy and your bot should be ready to use in a few minutes
-
+1. Go to https://github.com/devansh9999/Whatsapp-bot
+2. Scroll down and click on <code> deploy to heroku</code>
+3. Give ur bot a name(say mybot) and fill in ur mongodb_url(optional) , ocr_space_api_key(optional) and remove_bg_api_key(mandatory) and press deploy
+4. Open your command prompt again and type <code>heroku logs --tail -a mybot</code> (replace mybot with the name u gave to ur bot)
+- if this step gives u some error, type <code>heroku login</code> and then try the above step again
+5. scan the qr from ur whatsapp inside linked devices and Done !
 
 #### Setup cron-job to avoid idling:
 1. login/signup at [cronjobs](https://console.cron-job.org/login)
@@ -46,6 +41,16 @@
 3. add your heroku app url in url (something like this : </code>http://mybot.herokuapp.com</code>
 4. set execution schedule to every 15 mins
 5. click create
+
+
+
+##### Extra Steps To Receive Updates easily:
+1. Login to heroku and click on mybot
+2. go to deploy
+3. inside deployment methods, click on Github and connect it to ur fork of this repository
+4. now everytime i push an update to my repo, you just need to go to ur fork and press <code>sync fork</code> then <code>Update branch</code>
+5. Thats it, your bot will get all the new features I added
+
 
 ## Need Help?:
 - <a href="https://t.me/SciBot_Whatsapp" target="_blank"><img src="https://images.macrumors.com/t/yMMf-bY_9Mm9UdPbxEQi7RRhRtg=/1600x/article-new/2017/05/Telegram-app.jpg" alt="Paytm" style="height: 55px !important;width: 120px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
