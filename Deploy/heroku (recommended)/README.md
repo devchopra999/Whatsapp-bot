@@ -49,7 +49,7 @@
 ##### Extra Steps To Receive Updates easily:
 1. Login to heroku and click on mybot
 2. go to deploy
-3. inside deployment methods, click on Github and connect it to ur fork of this repository
+3. inside deployment methods, click on Github and connect it to ur fork of this repository and press <code>Enable Automatic Deploys</code>
 4. now everytime i push an update to my repo, you just need to go to ur fork and press <code>sync fork</code> then <code>Update branch</code>
 5. Thats it, your bot will get all the new features I added
 
