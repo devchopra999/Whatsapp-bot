@@ -1,12 +1,12 @@
 {
   "name": "SciBot",
   "description": "A Whatsapp bot compatible with MultiDevice (MD)",
-  "repository": "https://github.com/devansh9999/Whatsapp-bot",
+  "repository": "https://github.com/devansh9999/Bot-RA",
   
   "keywords": ["SciBot", "whatsapp-bot", "whatsapp"],
 
   "success_url": "https://devansh-scimitar.me/Whatsapp-bot",
-  "stack": "container",
+
   "buildpacks": [
     {
       "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
@@ -14,17 +14,12 @@
     },
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+     "url":"heroku/nodejs" 
     }
   ],
   "env": {
-    "SESSION_KEY": {
-      "description": "Session encryption password",
-      "value": ""
-    },
-    "SESSION_URL": {
-      "description": "session.secure public url (It is safe because it is encrypted, But still if you want maybe you can create some sort of authorization stuff)",
-      "value": ""
-    },
     "REMOVE_BG_API_KEY":{
       "description": "get it for free from https://www.remove.bg/api#remove-background",
       "value": ""
