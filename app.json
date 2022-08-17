@@ -1,7 +1,7 @@
 {
   "name": "SciBot",
   "description": "A Whatsapp bot compatible with MultiDevice (MD)",
-  "repository": "https://github.com/devansh9999/Whatsapp-bot",
+  "repository": "https://github.com/devansh9999/Whatsapp-bot/tree/session",
   
   "keywords": ["SciBot", "whatsapp-bot", "whatsapp"],
 
