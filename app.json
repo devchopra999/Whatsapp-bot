@@ -43,7 +43,7 @@
     },
     "DM_DELETE_ALERT": {
       "description": "show deleted messages in dm or not : ON or OFF",
-      "value": "true"
+      "value": "ON"
     },
     "OCR_SPACE_API_KEY": {
       "description": "Get it from https://ocr.space/OCRAPI",
