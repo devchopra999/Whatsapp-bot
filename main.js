@@ -703,6 +703,8 @@ client.on("message_create", async (msg) => {
 });
 
 client.on("group_join", async (msg) => {
+	try{
+		
   const chat = await msg.getChat();
   const contact = await client.getContactById(msg.recipientIds[0]);
   var contact_name;
@@ -725,7 +727,10 @@ client.on("group_join", async (msg) => {
   await chat.sendMessage(dp, { caption: "```Welcome To " + chat.name + "! " + contact_name + "```\n\n*Group Owner :* " + owner_name + "\n\n" + chat.description + "\n\n" + "_This Message is Automated by SciBot_" });
   // await chat.sendMessage(" _Welcome!_ "+contact.pushname+dp);
   // await chat.sendMessage(JSON.stringify(msg));
-
+	}
+	catch(error){
+	console.log(error);	
+	}
 });
 
 client.on("message_revoke_everyone", async (after, before) => {
