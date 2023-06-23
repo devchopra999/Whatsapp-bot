@@ -25,7 +25,7 @@ const mongoose = require('mongoose');
 Levels.setURL(config.mongodb_url).then(() => {
   const store = new MongoStore({ mongoose: mongoose });
   const client = new Client({
-      authStrategy: RemoteAuth,
+      authStrategy: new RemoteAuth({backupSyncIntervalMs:60000,store:store}),
 	  puppeteer: { headless: true,args: ["--no-sandbox"]},
   });
 
